@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Daily Journal — Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <div class="brand"><a href="index.html" class="brand-link"><span class="brand-mark">MJ</span><span class="brand-title">My Daily Journal</span></a></div>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link">Profile</a></li>
+        <li role="none"><a role="menuitem" href="article.html" class="nav-link">Article</a></li>
+        <li role="none"><a role="menuitem" href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li role="none"><a role="menuitem" href="schedule.html" class="nav-link">Schedule</a></li>
+      </ul>
+      <div class="controls">
+        <button id="theme-toggle" class="theme-switch" aria-pressed="false" aria-label="Toggle theme">
+          <div class="switch-track"><div class="switch-thumb" aria-hidden="true"></div></div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h1>Gallery</h1>
+      <p class="lead">Kumpulan foto kegiatan.</p>
+      <div class="gallery-grid">
+        <img src="foto1.JPG" alt="">
+        <img src="foto2.jpeg" alt="">
+        <img src="foto3.jpeg" alt="">
+        <img src="foto4.jpeg" alt="">
+        <img src="foto5.jpeg" alt="">
+        <img src="foto6.jpeg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Parasdiva Putri Agustina © 2024</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

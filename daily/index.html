@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Daily Journal — Profile</title>
+
+  <!-- Modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader / Logo fade-in -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="logo-mark">MJ</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <span class="brand-mark">MJ</span>
+          <span class="brand-title">My Daily Journal</span>
+        </a>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link active">Profile</a></li>
+        <li role="none"><a role="menuitem" href="article.html" class="nav-link">Article</a></li>
+        <li role="none"><a role="menuitem" href="gallery.html" class="nav-link">Gallery</a></li>
+        <li role="none"><a role="menuitem" href="schedule.html" class="nav-link">Schedule</a></li>
+      </ul>
+
+      <div class="controls">
+        <!-- Theme toggle: elegant switch -->
+        <button id="theme-toggle" class="theme-switch" aria-pressed="false" aria-label="Toggle theme">
+          <div class="switch-track">
+            <div class="switch-thumb" aria-hidden="true"></div>
+          </div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main-content">
+    <section class="profile-section card">
+      <div class="profile-left">
+        <img src="fotoku.jpeg" alt="Foto profil Parasdiva" class="profile-photo">
+      </div>
+
+      <div class="profile-right">
+        <h1 class="name">Profile mahasiswa</h1>
+       
+        <table class="profile-table" role="table" aria-label="Informasi profil">
+          <tbody>
+            <tr><td>Nama</td><td>: Parasdiva Putri Agustina</td></tr>
+            <tr><td>NIM</td><td>: A11.2024.16078</td></tr>
+            <tr><td>Program Studi</td><td>: Teknik Informatika</td></tr>
+            <tr><td>Email</td><td>: 111202416078@mhs.dinus.ac.id</td></tr>
+            <tr><td>Telepon</td><td>: 082136235496</td></tr>
+            <tr><td>Alamat</td><td>: Jl. Bayu Prasetya Timur III No. 1b, Kel.Bangetayu Wetan, Kec.Genuk, Kota Semarang</td></tr>
+          </tbody>
+        </table>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Parasdiva Putri Agustina © 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* style.css — My Daily Journal */
+/* Font: Inter (imported in HTML) */
+
+/* Color tokens */
+:root{
+  --bg: #fff;
+  --surface: #fbfbfb;
+  --muted: #7b7b7b;
+  --text: #111;
+  --accent: #000;
+  --glass: rgba(0,0,0,0.06);
+}
+
+/* Dark theme tokens */
+:root.dark{
+  --bg: #0a0a0a;
+  --surface: #0f0f0f;
+  --muted: #9aa0a6;
+  --text: #f5f5f5;
+  --accent: #fff;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* Global reset */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;}
+.container{max-width:1000px;margin:0 auto;padding:0 1rem;}
+
+/* Preloader */
+.preloader{
+  position:fixed;inset:0;display:grid;place-items:center;background:var(--bg);z-index:9999;transition:opacity .45s ease;
+}
+.preloader-inner{display:flex;align-items:center;justify-content:center}
+.logo-mark{
+  width:72px;height:72px;border-radius:12px;display:grid;place-items:center;font-weight:700;background:var(--surface);color:var(--accent);box-shadow:0 6px 18px var(--glass);
+  font-size:20px;letter-spacing:1px;
+  animation: logoPop .9s cubic-bezier(.2,.9,.3,1);
+}
+@keyframes logoPop{0%{transform:scale(.85);opacity:0}60%{transform:scale(1.05);opacity:1}100%{transform:none}}
+
+/* Header / Navbar */
+.site-header{backdrop-filter:blur(4px);}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem;position:sticky;top:0;background:transparent}
+.brand-link{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text)}
+.brand-mark{width:36px;height:36px;border-radius:8px;background:var(--surface);display:grid;place-items:center;font-weight:700;color:var(--accent);box-shadow:0 6px 18px var(--glass)}
+.brand-title{font-weight:600;font-size:0.98rem}
+.nav-links{display:flex;gap:.6rem;list-style:none;padding:0;margin:0}
+.nav-link{display:inline-block;padding:.45rem .7rem;border-radius:8px;color:var(--text);text-decoration:none;font-weight:600;transition:background .25s ease,color .25s ease}
+.nav-link:hover{background:var(--glass)}
+.nav-link.active{background:transparent;border:1px solid var(--glass);}
+
+/* Theme switch (elegant toggle) */
+.controls{display:flex;align-items:center;gap:.6rem}
+.theme-switch{width:56px;height:30px;padding:4px;border-radius:999px;border:none;background:var(--surface);display:inline-grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px var(--glass);transition:transform .25s ease}
+.switch-track{width:48px;height:22px;background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.01));border-radius:999px;position:relative}
+.switch-thumb{width:18px;height:18px;border-radius:50%;background:var(--accent);position:absolute;left:3px;top:2px;transition:left .28s cubic-bezier(.2,.9,.3,1),background .28s ease}
+:root.dark .switch-thumb{left:27px;background:var(--accent)}
+
+/* Main content */
+.main-content{padding:2.4rem 0}
+.card{background:var(--surface);border-radius:12px;padding:1.4rem;box-shadow:0 12px 30px var(--glass);transition:transform .36s ease,box-shadow .36s ease}
+.card:hover{transform:translateY(-6px);}
+
+/* Profile */
+.profile-section{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.profile-left{flex:0 0 200px}
+.profile-photo{width:200px;height:200px;border-radius:20px;object-fit:cover;box-shadow:0 12px 30px var(--glass);transition:transform .36s ease}
+.profile-photo:hover{transform:scale(1.03)}
+.profile-right{flex:1}
+.name{margin:0;font-weight:700;font-size:1.6rem}
+.meta{color:var(--muted);margin-top:.4rem}
+.profile-table{margin-top:1rem;border-collapse:collapse;width:100%;color:var(--muted)}
+.profile-table td{padding:.45rem .6rem;border-bottom:1px dashed var(--glass)}
+.profile-actions{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:transparent;border:1px solid var(--text);color:var(--text);text-decoration:none;font-weight:600;margin-right:.6rem}
+.btn-ghost{border-color:transparent;background:transparent;opacity:.8}
+
+/* Article cards */
+.card-container{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.card-article{width:300px;border-radius:12px;overflow:hidden;background:var(--surface);box-shadow:0 10px 28px var(--glass);transition:transform .36s ease,box-shadow .36s ease}
+.card-article img{width:100%;height:180px;object-fit:cover;display:block}
+.card-body{padding:1rem}
+.card-article:hover{transform:translateY(-8px);box-shadow:0 24px 48px var(--glass)}
+
+/* Gallery grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 12px 30px var(--glass);transition:transform .36s ease}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+/* Schedule */
+.schedule-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+.schedule-card{padding:1rem;border-radius:10px;background:var(--surface);box-shadow:0 10px 28px var(--glass);transition:transform .28s ease}
+.schedule-card h3{margin:0;color:var(--text)}
+.schedule-card ul{margin:.6rem 0 0 1rem;color:var(--muted)}
+
+/* Footer */
+.site-footer{margin-top:2.4rem;padding:1.2rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:860px){
+  .profile-left{flex-basis:160px}
+  .profile-photo{width:160px;height:160px;border-radius:14px}
+}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .brand-title{display:none}
+  .profile-left{flex-basis:100%}
+  .profile-photo{width:100%;height:auto;border-radius:12px}
+  .profile-section{flex-direction:column;align-items:stretch}
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Daily Journal — Schedule</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <div class="brand"><a href="index.html" class="brand-link"><span class="brand-mark">MJ</span><span class="brand-title">My Daily Journal</span></a></div>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link">Profile</a></li>
+        <li role="none"><a role="menuitem" href="article.html" class="nav-link">Article</a></li>
+        <li role="none"><a role="menuitem" href="gallery.html" class="nav-link">Gallery</a></li>
+        <li role="none"><a role="menuitem" href="schedule.html" class="nav-link active">Schedule</a></li>
+      </ul>
+      <div class="controls">
+        <button id="theme-toggle" class="theme-switch" aria-pressed="false" aria-label="Toggle theme">
+          <div class="switch-track"><div class="switch-thumb" aria-hidden="true"></div></div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h1>Schedule</h1>
+      <p class="lead">Jadwal kuliah & kegiatan mahasiswa.</p>
+
+      <div class="schedule-grid">
+        <div class="schedule-card">
+          <h3>Senin</h3>
+          <ul>
+            <li>09:30 - 12:00 : Rekayasa Perangkat Lunak (H.5.7)</li>
+            <li>14:10 - 14:50 : Kewarganegaraan (E.3)</li>
+            <li>18.00 - 10.00 : Latihan Dance (F.2)</li>
+          </ul>
+        </div>
+
+        <div class="schedule-card">
+          <h3>Selasa</h3>
+          <ul>
+            <li>07:00 - 09:30 : Sistem Operasi (H.5.7)</li>
+            <li>12:30 - 15:00 :Logika Informatika(H.5.4)</li>
+          </ul>
+        </div>
+
+        <div class="schedule-card">
+          <h3>Rabu</h3>
+          <ul>
+            <li>07:00 - 09:30 : Probabilitas dan Statistik (H.4.4)</li>
+            <li>15:00 - 17:30 : Latihan silat</li>
+          </ul>
+        </div>
+
+        <div class="schedule-card">
+          <h3>Kamis</h3>
+          <ul>
+            <li>08:40 - 10:20 : Pemrogaman Web (D.2.J)</li>
+            <li>14:10 - 15:50 : Desain UI/UX (H.5.8)</li>
+          </ul>
+        </div>
+
+        <div class="schedule-card">
+          <h3>Jumat</h3>
+          <ul>
+            <li>08:40 - 10:20 : Basis Data (D.2.K)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Parasdiva Putri Agustina © 2024</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
